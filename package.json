@@ -1,0 +1,31 @@
+{
+  "name": "mcp-validation-envelope",
+  "version": "0.1.0",
+  "description": "Structured Zod validation recovery for low-level MCP TypeScript SDK tool handlers.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Xuefeng Zhu",
+  "repository": { "type": "git", "url": "git+https://github.com/Xuefeng-Zhu/mcp-validation-envelope.git" },
+  "homepage": "https://github.com/Xuefeng-Zhu/mcp-validation-envelope#readme",
+  "bugs": { "url": "https://github.com/Xuefeng-Zhu/mcp-validation-envelope/issues" },
+  "engines": { "node": ">=22.12" },
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "npm run build && npm run typecheck && node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --import tsx --test test/*.test.ts",
+    "example": "npm run build && node --import tsx examples/in-memory.ts",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

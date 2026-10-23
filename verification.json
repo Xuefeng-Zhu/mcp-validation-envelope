@@ -1,0 +1,48 @@
+{
+  "verified_at": "2026-10-23T15:58:43.747375+00:00",
+  "node": "24.14.1",
+  "mcp_sdk": "1.32.1",
+  "zod": "4.6.5",
+  "checks": {
+    "typescript_check": "passed after explicit rootDir for compiled public self-export",
+    "build": "passed",
+    "node_test_runner": {
+      "tests": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    "compiled_public_export_example": "passed: invalid quantity rejected, corrected total998 returned",
+    "npm_pack": "passed: dry-run includes compiled ESM, declarations, README, license and package metadata"
+  },
+  "scope": "Real SDK Client/Server over InMemoryTransport. No HTTP listener, authentication, AWS/model provider, deployment, or npm publication tested.",
+  "source_sha256": {
+    "src/index.ts": "170bd9173338b5d8972e0ee5253e8db9deecf986e05720f9009408d70d74f9a5",
+    "test/envelope.test.ts": "0477ebeefd15be3c81b6153975d5138566b2160c5d54a3dfb51250fa21677841",
+    "test/sdk-roundtrip.test.ts": "0f6298d7ea77743abf9591f0ff433922b13c717287309dd726d64dfa10b5a5c0",
+    "examples/in-memory.ts": "dec7e7925bf5dfd27dead45ef78ff0ff055033bc3a5339614e8b507e520505a6",
+    "package.json": "8c5c0d4b41c5a6a2ba31eb0c95f5c15907cfa1cf20edc18e56202df5c3aa18b7",
+    "package-lock.json": "22b134df687acbb8e493a072af3333cbed9f8ce0bf51c0a68ef57c1c77e102c9",
+    "README.md": "cd48564272e8bdb93a31e1d0de50aab32bdb5d06e353208db2da989fd1fcf2d2",
+    "LICENSE": "3f085091f2b41f4e45bb9d86513e339ed3de769a68d99db2f1a21a6c83cc0b7d",
+    "tsconfig.json": "c0432dc141a188846b395b68da44960176c8cb9839252c150c471f16ec280897",
+    "tsconfig.build.json": "b06dc17d5be8271924b66d7dae69a5e08f1eb0aff9e12533c2d3fb7a17445885"
+  },
+  "packDryRun": {
+    "passed": true,
+    "command": "npm_config_cache=<task-cache> npm pack --dry-run --json",
+    "entryCount": 5,
+    "contains": [
+      "LICENSE",
+      "README.md",
+      "dist/index.d.ts",
+      "dist/index.js",
+      "package.json"
+    ],
+    "publishedToNpm": false
+  },
+  "independentReview": {
+    "inputValidationExceptionIssueFixed": true,
+    "regressionTestPassed": true,
+    "remainingBlockingFindings": 0
+  }
+}
